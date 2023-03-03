@@ -1,0 +1,79 @@
+.body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+  padding-left: 8%;
+  padding-bottom: 0;
+  padding-right: 8%;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+
+.nav-link{
+  color: #576871;
+}
+
+.active{
+  border-bottom: 5px solid #0073e6;
+}
+
+/* hr{
+  border-color: #C2C7D0;
+} */
+
+.page-title{
+  font-size: 1.4em;
+  margin-left: 8%;
+  font-weight: bold;
+  display: inline;
+}
+
+.score{
+  margin-left: 47.5%;
+  font-weight: 600;
+}
+
+.questions{
+  padding-left: 8%;
+}
+
+.question{
+  border-radius: 5px;
+  background: white;
+  border: 1px solid #C2C7D0;
+  width: 60%;
+  height: 7em;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.name{
+  color: #0073e6;
+  margin: 2%;
+  font-size: 1.2em;
+}
+
+.details{
+  margin-left: 2%;
+}
+
+.button2{
+  height: 40px;
+  width: 150px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #0059b3;
+  border: solid 1px;
+  font-size: 17px;
+  margin-right: 2%;
+  position: absolute;
+  bottom: 30px;
+  left: 600px;
+}
+
+.ps_img{
+  width: 500px;
+  position: absolute;
+  top: 11em;
+  left: 57em;
+}

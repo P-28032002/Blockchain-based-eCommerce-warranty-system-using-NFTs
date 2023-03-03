@@ -1,0 +1,63 @@
+<div class="body">
+
+  <div class="editor">
+    <!-- languages & theme -->
+    <div class="settings">
+          <select class="languages-select" id="languages-select" (change)="onLanguageSelect()" #languagesSelect>
+              <option *ngFor="let language of languageTable; let i = index" value="{{i}}" class="language-option">
+                  {{language.name}} ({{language.version}})
+              </option>
+          </select>
+          <!-- theme radio buttons -->
+          <!-- <div class="col-auto col-lg-3 col-md-4 col-sm-6">
+              <div class="btn-group btn-group-toggle btn-group-sm mx-auto" data-toggle="buttons">
+                  <label *ngFor="let theme of supportedThemes; let i = index" class="btn btn-secondary active" (change)="onThemeSelect(theme)" [ngClass]="{'active': theme===currentTheme}">
+                      <input type="radio" name="options" autocomplete="off" [checked]="theme===currentTheme">
+                      <span>{{theme}}</span>
+                  </label>
+              </div>
+          </div> -->
+    </div>
+
+    <!-- the code editor -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="code-editor" #codeEditor></div>
+        </div>
+    </div>
+  </div>
+
+    <!-- run, clear & beautify buttons -->
+    <div class="buttons">
+            <button type="button" class="button2" (click)="onRunContent()">
+                Run
+            </button>
+            <button type="button" class="button1" (click)="onSubmitContent()">
+                Submit
+            </button>
+        <!-- <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+            <button type="button" class="btn btn-beautify btn-sm btn-block px-4 mx-2" (click)="beautifyContent()">
+                Beautify
+            </button>
+        </div> -->
+    </div>
+
+    <!-- output box -->
+    <!-- <div class="row mt-4">
+        <div class="col">
+            <div class="label-box border"><span class="mx-4 font-weight-light">Output</span></div>
+            <textarea class="form-control output" rows="6" disabled="true" aria-label="output-textarea" #outputBox></textarea>
+        </div>
+    </div> -->
+
+    <!-- <b style="margin-top: 1em;">Custom Input</b> -->
+    <div class="custom-input">
+      <div><b>Custom Input</b></div>
+      <textarea class="form-control output input-box" rows="6" aria-label="output-textarea" #inputBox></textarea>
+    </div>
+
+    <div>
+        <div><b>Output</b></div>
+        <textarea class="form-control output output-box" rows="6" disabled="true" aria-label="output-textarea" #outputBox></textarea>
+    </div>
+</div>

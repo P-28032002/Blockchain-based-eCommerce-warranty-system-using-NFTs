@@ -1,0 +1,75 @@
+<div>
+    <!-- header -->
+    <nav class="navbar navbar-light bg-light ">
+        <div class="container text-center p-2 ">
+            <span class="mx-auto text-bold">IDE for WT Project</span>
+        </div>
+    </nav>
+</div>
+
+
+
+<div class="container h-100 mt-4">
+
+    <!-- languages & theme -->
+    <div class="row mb-4 justify-content-center mx-4">
+        <!-- <div *ngIf="cantReachServer; else reachServer">
+            <span class="font-weight-bold">Can't reach server :( , try to refresh the page.. </span>
+        </div> -->
+        <!-- languages select -->
+        <div class="col-auto col-lg-3 col-md-4 col-sm-6">
+            <div class="input-group input-group-sm">
+                <!-- <div class="input-group-prepend" style="display: inline;"> -->
+                <label class="input-group-text" for="languages-select" style="display: inline;">Languages</label>
+                <select class="languages-select" style="display: inline;" id="languages-select" (change)="onLanguageSelect()" #languagesSelect>
+                  <option *ngFor="let language of languageTable; let i = index" value="{{i}}">
+                      {{language.name}} ({{language.version}})
+                  </option>
+                </select>
+            </div>
+        </div>
+        <!-- theme radio buttons -->
+        <div class="col-auto col-lg-3 col-md-4 col-sm-6">
+            <div class="btn-group btn-group-toggle btn-group-sm mx-auto" data-toggle="buttons">
+                <label *ngFor="let theme of supportedThemes; let i = index" class="btn btn-secondary active" (change)="onThemeSelect(theme)" [ngClass]="{'active': theme===currentTheme}">
+                    <input type="radio" name="options" autocomplete="off" [checked]="theme===currentTheme">
+                    <span>{{theme}}</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- the code editor -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="code-editor" #codeEditor></div>
+        </div>
+    </div>
+
+    <!-- run, clear & beautify buttons -->
+    <div class="row mb-4 justify-content-center mx-4">
+        <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+            <button type="button" class="btn btn-dark btn-sm btn-block px-4 mx-2" (click)="onRunContent()">
+                Run
+            </button>
+        </div>
+        <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+            <button type="button" class="btn btn-primary btn-sm btn-block px-4 mx-2" (click)="consoleCode()">
+                Clear
+            </button>
+        </div>
+        <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+            <button type="button" class="btn btn-beautify btn-sm btn-block px-4 mx-2" (click)="beautifyContent()">
+                Beautify
+            </button>
+        </div>
+    </div>
+
+    <!-- output box -->
+    <div class="row mt-4">
+        <div class="col">
+            <div class="label-box border"><span class="mx-4 font-weight-light">Output</span></div>
+            <textarea class="form-control output" rows="6" disabled="true" aria-label="output-textarea" #outputBox></textarea>
+        </div>
+    </div>
+</div>

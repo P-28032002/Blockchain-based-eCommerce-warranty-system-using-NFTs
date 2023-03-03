@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nft-warranty-backend": {
+      "hosting": {
+        "y": [
+          "nft-warranty-backend"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nft-warranty-backend"
+  }
+}

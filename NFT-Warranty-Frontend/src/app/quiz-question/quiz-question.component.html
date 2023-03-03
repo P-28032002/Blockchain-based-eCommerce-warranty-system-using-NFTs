@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-sm" style="margin-bottom: 20px;">
+<!-- Brand/logo -->
+  <a class="navbar-brand">
+    <img src="/assets/logo.png" style="width: 150px; height: 30px; margin-bottom: 5px;" alt="">
+  </a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/dashboard">PROGRAMS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/quiz-dashboard">QUIZZES</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/code-editor">ONLINE IDE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.geeksforgeeks.org/data-structures/" target="_blank">DATA STRUCTURES</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://cp-algorithms.com/" target="_blank">CP</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contactus">{{ user_name }} <i style="margin-right: 5px;" class="far fa-user"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contactus" (click)="logout()">Logout <i style="margin-right: 5px;" class="fas fa-sign-out-alt"></i></a>
+    </li>
+  </ul>
+</nav>
+  <hr>
+  <h1 class="page-title" #quiz_topic>Topic</h1>
+<hr>
+    <div class="quizz1">
+            <div class="question" #question_description>
+                <br><br><br><br>
+            </div>
+            <div class="ans" *ngFor="let v1 of c">
+              <div *ngIf="v1 == current_question">
+                <div class="options" *ngIf="answers[v1-1] == 1; else elseBlock1" >
+                    <input id="x1" type="radio" name="option" value="" checked (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question1 }}</label><br>
+                </div>
+                <ng-template #elseBlock1>
+                    <input id="y1" type="radio" name="option" value="" (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question1 }}</label><br>
+                </ng-template>
+
+                <div class="options" *ngIf="answers[v1-1] == 2; else elseBlock2">
+                    <input id="x2" type="radio" name="option" value="" checked (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question2 }}</label><br>
+                </div>
+                <ng-template class="options" #elseBlock2>
+                    <input id="y2" type="radio" name="option" value="" (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question2 }}</label><br>
+                </ng-template>
+
+                <div class="options" *ngIf="answers[v1-1] == 3; else elseBlock3">
+                    <input id="x3" type="radio" name="option" value="" checked (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question3 }}</label><br>
+                </div>
+                <ng-template class="options" #elseBlock3>
+                    <input id="y3" type="radio" name="option" value="" (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question3 }}</label><br>
+                </ng-template>
+
+                <div class="options" *ngIf="answers[v1-1] == 4; else elseBlock4">
+                    <input id="x4" type="radio" name="option" value="" checked (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question4 }}</label><br>
+                    <br><br><br><br><br>
+                </div>
+                <ng-template class="options" #elseBlock4>
+                    <input id="y4" type="radio" name="option" value="" (click)="onOptionSelect($event)">
+                    <label>{{ quiz_question_data[v1-1].question4 }}</label><br>
+                    <br><br><br><br><br>
+                </ng-template>
+              </div>
+            </div>
+            <hr>
+            <div class="pre">
+              <br><br>
+              <button id="prev_btn" type="button" class="btn" (click)="load_prev_question()" #prev_btn>
+                <i class='fas fa-angle-left' style="color: white;"></i> Previous
+              </button>
+            </div>
+            <div class="btn_next">
+                <br><br>
+                <button id="next_btn" type="button" class="btn" (click)="load_next_question()" #next_btn>
+                  Next <i class='fas fa-angle-right'></i>
+                </button>
+            </div>
+            <div class="btn_next">
+                <br><br>
+                <button id="submit_btn" type="button" class="btn" (click)="submit_quiz()" #submit_btn>
+                  Submit <i class='fas fa-angle-right'></i>
+                </button>
+            </div>
+        </div>
+    <div data-spy="scroll" class="s1" >
+          <!-- <a class="dot" type="button" *ngFor="let v1 of c" [(ngModel)]="item" name="item" (click)="displayQuestion()">{{v1}}</a> -->
+            <!-- <input class="dot" type="button" *ngFor="let v1 of c" [(ngModel)]="item" name="item" value="{{v1}}" (click)="displayQuestion()" > -->
+           <div class="s2">
+            <button id='{{ v1 }}' class="dot" *ngFor="let v1 of c" (click)="change_question($event)">{{v1}}</button>
+           </div>
+    </div>

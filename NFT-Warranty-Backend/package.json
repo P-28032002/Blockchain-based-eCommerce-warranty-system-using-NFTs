@@ -1,0 +1,31 @@
+{
+  "name": "nft-warranty",
+  "version": "1.0.0",
+  "description": "Warranty system using NFT",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhishekMore-1/NFT-Warranty.git"
+  },
+  "keywords": [
+    "NFT",
+    "Warranty-System",
+    "Blockchain"
+  ],
+  "author": "Crazy Programmers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhishekMore-1/NFT-Warranty/issues"
+  },
+  "homepage": "https://github.com/AbhishekMore-1/NFT-Warranty#readme",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.7.1",
+    "truffle": "^5.5.23"
+  }
+}

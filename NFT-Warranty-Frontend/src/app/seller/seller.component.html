@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<div class="body">
+  <br>
+  <h1>Product Page</h1>
+  <p>Add your products here</p>
+  <br>
+  <div class="wrapper">
+      <div class="title-text">
+        <h1>Product's Information</h1>
+      </div>
+      <div class="form-container">
+        <div class="form-inner">
+          <form action="#" class="signup" id="productNFT">
+            <input type="hidden" #myhidden name="tokenID" id="tokenID" required>
+            <div class="field">
+              <input type="text" #mybrand name="brand" id="brand" placeholder="Brand name" required>
+            </div>
+            <div class="field">
+              <input type="text" #mytitle name="title" id="title" placeholder="Title" required>
+            </div>
+            <div class="field">
+              <input type="text" #mymodelnumber name="model_number" id="model_number" placeholder="Model Number" required>
+            </div>
+            <div class="field">
+              <input type="text" #myreturnperiod name="return_period" id="return_period" placeholder="Return Period" required>
+            </div>
+            <div class="field">
+                <input type="number" #mywarrantyperiod name="warranty_period" id="warranty_period" placeholder="Warranty Period (In months)" required>
+              </div>
+            <div class="field">
+              <input type="text" #myidentifier name="identifier" id="identifier" placeholder="Identifier" required>
+            </div>
+            <div class="field">
+                <input type="text" #myproductimg name="productimg" id="productimg" placeholder="Product Image Link" required>
+            </div>
+            <div class="field">
+              <label for="launch_date">Launch Date</label>
+              <input type="date" #mylaunchdate name="launch_date" id="launch_date" required>
+            </div>
+            <div class="field">
+              <label for="purhcase_date">Purchase Date</label>
+              <input type="date" #mypurchasedate name="purchase_date" id="purchase_date" required>
+            </div>
+            <div class="field btn">
+              <input type="button" onclick="App.mintProduct();" (click)="addData();" value="Add Product">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

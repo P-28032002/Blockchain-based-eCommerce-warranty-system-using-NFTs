@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<div class="body">
+  <br>
+  <h1>Edit Profile</h1>
+  <p>Edit your profile here</p>
+  <br>
+  <div *ngFor="let item of data" class="wrapper">
+      <div class="title-text">
+        <h1>Profile Information</h1>
+      </div>
+      <div class="form-container">
+        <div class="form-inner">
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" #myfirstname name="firstname" id="firstname" placeholder="First Name" value="{{item.first_name}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #mymiddlename name="middlename" id="middlename" placeholder="Middle Name" value="{{item.middle_name}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #mylastname name="lastname" id="lastname" placeholder="Last Name" value="{{item.last_name}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #mygender name="gender" id="gender" placeholder="Gender" value="{{item.gender}}" required>
+            </div>
+            <div class="field">
+              <input type="email" #myemail name="email" id="email" placeholder="Email" value="{{item.email}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #myaddress name="address" id="address" placeholder="Address" value="{{item.address}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #myphno name="phno" id="phno" placeholder="Phone Number" value="{{item.mobile_no}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #mypublicwalletid name="publicwalletid" id="publicwalletid" placeholder="Public Wallet ID" value="{{item.public_id_wallet}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #myotherinfo name="otherinfo" id="otherinfo" placeholder="Other Information" value="{{item.other_info}}" required>
+            </div>
+            <div class="field">
+              <input type="text" #myprofilephoto name="profilephoto" id="profilephoto" placeholder="Profile Photo Link" value="{{item.profile_photo}}" required>
+            </div>
+            <div class="field">
+              <label for="DOB">Date of Birth</label>
+              <input type="text" #mydob name="dob" id="dob" value={{item.dob}} required>
+            </div>
+            <div class="field btn">
+              <input type="submit" (click)="updateData(item.id)" value="Edit Profile">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

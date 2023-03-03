@@ -1,0 +1,58 @@
+<div class="body">
+  <img src="/assets/logo.png" style="width: 225px; height: 63px;"alt="">
+  <br>
+  <h1>Join Now</h1>
+  <p>One of it's kind NFT Marketplace.</p>
+  <br>
+  <div class="wrapper">
+      <div class="title-text">
+        <div class="title login" #mylogin>Login</div>
+        <div class="title signup">Signup</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label (click)="loginBtn()" for="login" class="slide login">Login</label>
+          <label (click)="signupBtn()" for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="#" class="login" #myloginform>
+            <div class="field">
+              <input type="text" placeholder="Email Address" #login_email required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" #login_password required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login" (click)="login($event)">
+            </div>
+
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" name="email" id="email" placeholder="Email Address" (blur)="validateEmail()" #myEmail required>
+            </div>
+            <div class="field">
+              <input type="text" #myphno name="phno" id="phno" placeholder="Phone Number" (blur)="validatePhoneNumber()"required>
+            </div>
+            <div class="field">
+              <input type="password" #mypass1 name="pass1" id="pass1" placeholder="Password" required>
+            </div>
+            <div class="field">
+              <input type="password" #mypass2 name="pass2" id="pass2" placeholder="Confirm password" (blur)="validatePassword2()"required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" (click)="signedinOrNot($event)" value="Signup">
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

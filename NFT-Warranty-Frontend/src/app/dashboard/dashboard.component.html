@@ -1,0 +1,105 @@
+<div class="body">
+  <nav class="navbar navbar-expand-sm" style="margin-bottom: 20px;">
+  <!-- Brand/logo -->
+    <a class="navbar-brand">
+      <img src="/assets/logo.png" style="width: 155px; height: 40px; margin-bottom: 5px;" alt="">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/dashboard">SHOP</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/cart">CART</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/mynft">MY NFTs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/redeem">REDEEM</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="https://www.geeksforgeeks.org/data-structures/" target="_blank">DATA STRUCTURES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://cp-algorithms.com/" target="_blank">CP</a>
+      </li> -->
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus">{{ user_name }} <i style="margin-right: 5px;" class="far fa-user"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus" (click)="logout()">Logout <i style="margin-right: 5px;" class="fas fa-sign-out-alt"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <hr>
+    <h1 class="page-title"><span style="color: #FE5E5E; font-size: 1.2em;">Items</span> Currently In The Market</h1>
+    <span class="score">Block Coins: {{ coins }}</span>
+  <hr>
+  <br>
+  <br>
+
+  <div class="currently-market">
+      <div class="row grid" *ngFor="let item of items">
+        <div class="currently-market-item">
+          <div class="item">
+            <div class="left-image">
+              <img src="{{ item.image }}" alt="" class="image">
+            </div>
+            <div class="right-content">
+              <h4>{{ item.name }}</h4>
+              <h3>₹{{ item.price }}</h3>
+              <ul>
+                <li *ngFor="let data of item.description">{{ data }}</li>
+              </ul>
+              <button *ngIf="item.bought == 0" id="{{ item.id }}" type="button" name="button" class="button" (click)="addToCart($event)"><i class="fa fa-shopping-cart"></i> ADD TO CART</button>
+              <button *ngIf="item.bought == 1" id="{{ item.id }}" type="button" name="button" class="button" disabled><i class="fas fa-check-circle"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- <div class="questions">
+    <div *ngFor="let problem of problems" class="question">
+      <div class="name" *ngIf="problem.solved">
+        <i class="fas fa-check-circle"></i> {{ problem.name }}
+      </div>
+      <div class="name" *ngIf="problem.solved == 0">
+        {{ problem.name }}
+      </div>
+      <span class="details">
+        <span style="color: #979faf;">
+          Max Score: <b style="color: #39424e;">{{ problem.max_score }}</b>
+        </span>
+        &nbsp;
+        &nbsp;
+        <span style="color: #979faf;">
+          Difficulty: <b style="color: #39424e;">{{ problem.difficulty }}</b>
+        </span>
+      </span>
+      <button id="{{ problem.problem_id }}" type="button" name="button" class="button2" (click)="solve($event)">Solve Problem</button>
+    </div>
+  </div> -->
+  <!-- <div class="question">
+    <div class="name">
+      <i class="fas fa-check-circle"></i> "Odd Even"
+    </div>
+    <span class="details">
+      <span style="color: #979faf;">
+        Max Score: <b style="color: #39424e;">100</b>
+      </span>
+      &nbsp;
+      &nbsp;
+      <span style="color: #979faf;">
+        Difficulty: <b style="color: #39424e;">Hard</b>
+      </span>
+    </span>
+    <button id="" type="button" name="button" class="button2"></button>
+  </div> -->
+  <img src="/assets/dashboard.svg" class="ps_img" alt="">
+</div>

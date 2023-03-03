@@ -1,0 +1,83 @@
+<div class="body">
+  <nav class="navbar navbar-expand-sm" style="margin-bottom: 20px;">
+  <!-- Brand/logo -->
+    <a class="navbar-brand">
+      <img src="/assets/logo.png" style="width: 155px; height: 40px; margin-bottom: 5px;" alt="">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard">SHOP</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/cart">CART</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/mynft">MY NFTs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/redeem">REDEEM</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus">{{ user_name }} <i style="margin-right: 5px;" class="far fa-user"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus" (click)="logout()">Logout <i style="margin-right: 5px;" class="fas fa-sign-out-alt"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <hr>
+    <h1 *ngIf="total_price != 0" class="page-title"><span style="color: #FE5E5E; font-size: 1.1em;">Shopping</span> Cart Details Here</h1>
+    <h1 *ngIf="total_price == 0" class="page-title"><span style="color: #FE5E5E; font-size: 1.1em;">Shopping</span> Cart Is Empty</h1>
+    <!-- <span class="score">Current Score: {{ score }}</span> -->
+  <hr>
+  <br>
+  <br>
+
+  <div class="currently-market">
+      <div class="row grid" *ngFor="let item of items">
+        <div class="currently-market-item">
+          <div class="item">
+            <div class="left-image">
+              <img src="{{ item.image }}" alt="" class="image">
+            </div>
+            <div class="right-content">
+              <h4>{{ item.name }}</h4>
+              <h3>₹{{ item.price }}</h3>
+              <ul>
+                <li *ngFor="let data of item.description">{{ data }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div *ngIf="total_price != 0" class="total">
+    <h4 class="details">Price Details</h4>
+    <button  type="button" name="button" class="button" (click)="buyItems()">BUY <i class="fa fa-shopping-bag"></i></button>
+    <hr class="hrule">
+    <span class="item-label">Items Price: </span>
+    <span class="item-price">₹{{this.total_price}}</span>
+    <span class="shipping-label">Shipping Price: </span>
+    <span class="shipping-price">₹30</span>
+    <hr class="hrule2">
+    <span class="amount-label"><strong>Total Amount:</strong></span>
+    <span class="amount-price"><strong>₹{{this.total_price+30}}</strong></span>
+  </div>
+  <div *ngIf="total_price == 0" class="total">
+    <h4 class="details">Price Details</h4>
+    <button  type="button" name="button" class="button" (click)="buyItems()">BUY <i class="fa fa-shopping-bag"></i></button>
+    <hr class="hrule">
+    <span class="item-label">Items Price: </span>
+    <span class="item-price">₹{{this.total_price}}</span>
+    <span class="shipping-label">Shipping Price: </span>
+    <span class="shipping-price">₹0</span>
+    <hr class="hrule2">
+    <span class="amount-label"><strong>Total Amount:</strong></span>
+    <span class="amount-price"><strong>₹{{this.total_price+0}}</strong></span>
+  </div>
+</div>

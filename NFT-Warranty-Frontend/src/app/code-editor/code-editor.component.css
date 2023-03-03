@@ -1,0 +1,148 @@
+/* div.code-editor {
+    max-height: 70vh;
+}
+
+div.label-box {
+    border-top-left-radius: .5rem!important;
+    border-top-right-radius: .5rem!important;
+}
+
+.form-control { border-radius: 0 !important; }
+
+.form-control:disabled { background-color: #ffffff !important; }
+
+.output {
+    border-bottom-left-radius: .5rem!important;
+    border-bottom-right-radius: .5rem!important;
+}
+
+.btn-beautify {
+    color: #ffffff;
+    background-color: #e83e8c;
+}
+
+select.languages-select {
+    cursor: pointer;
+}
+
+select.languages-select > option {
+    display: block;
+    background: ghostwhite;
+}
+
+select.languages-select:focus > option:checked {
+    font-weight: bold;
+}
+
+.input-group-text{
+    display: inline;
+} */
+
+.body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.editor-body{
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+nav{
+  padding-left: 8%;
+  padding-bottom: 0;
+  padding-right: 8%;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+
+.nav-link{
+  color: #576871;
+}
+
+.active{
+  border-bottom: 5px solid #0073e6;
+}
+
+.page-title{
+  font-size: 1.4em;
+  margin-left: 8%;
+  font-weight: bold;
+  display: inline;
+}
+
+.editor{
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+  background-color: #f8f9fa;
+}
+
+.settings{
+
+}
+
+#languages-select{
+  display: inline;
+  margin: 0.75em;
+  width: 20em;
+  height: 2.5em;
+  border: 1px solid #C2C7D0;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  margin-left: 54em;
+  color: #39424e;
+}
+
+.language-option{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 5em;
+  color: #39424e;
+}
+
+.code-editor{
+  border-top: 1px solid #C2C7D0;
+  border-bottom: 1px solid #C2C7D0;
+}
+
+.button1{
+  height: 2.5em;
+  width: 8em;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(right,#003366,#004080,#0059b3
+, #0073e6);
+  color: #fff;
+  border: none;
+  font-size: 17px;
+  margin-left: 20px;
+}
+
+.button2{
+  height: 2.5em;
+  width: 8em;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #0059b3;
+  border: solid 1px;
+  font-size: 17px;
+}
+
+.buttons{
+  margin-left: 56em;
+}
+
+.custom-input{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.input-box{
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+
+.output-box{
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}

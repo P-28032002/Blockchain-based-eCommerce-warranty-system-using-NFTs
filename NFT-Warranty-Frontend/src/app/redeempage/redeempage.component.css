@@ -1,0 +1,245 @@
+.body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+  padding-left: 8%;
+  padding-bottom: 0;
+  padding-right: 8%;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+
+.nav-link{
+  color: #576871;
+}
+
+.active{
+  border-bottom: 5px solid #FE5E5E;
+}
+
+h1{
+  color: #39424e;
+  /* margin-left: 100em; */
+}
+/* hr{
+  border-color: #C2C7D0;
+} */
+
+.page-title{
+  font-size: 1.4em;
+  margin-left: 8.4%;
+  font-weight: bold;
+  display: inline;
+}
+
+.score{
+  margin-left: 47.5%;
+  font-weight: 600;
+  color: #39424e;
+}
+
+.questions{
+  padding-left: 8%;
+}
+
+.question{
+  padding-left: 8%;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid #C2C7D0;
+  width: 60%;
+  height: 7em;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.name{
+  color: #0073e6;
+  margin: 2%;
+  font-size: 1.2em;
+}
+
+.details{
+  margin-left: 2%;
+}
+
+.button2{
+  height: 40px;
+  width: 150px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #0059b3;
+  border: solid 1px;
+  font-size: 17px;
+  margin-right: 2%;
+  position: absolute;
+  bottom: 30px;
+  left: 600px;
+}
+
+.ps_img{
+  width: 35em;
+  position: fixed;
+  top: 11em;
+  left: 50em;
+}
+
+.button{
+  position: relative;
+  bottom: -1.8em;
+  /* margin-top: 2em; */
+  height: 50px;
+  width: 180px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right,#e52d27, #FE5E5E);
+  color: #fff;
+  border: none;
+  font-size: 17px;
+  /* margin-right: 20px; */
+}
+
+.image {
+  width: 12em;
+  height: 20em;
+  border-radius: 20px;
+  border: 1px solid #C2C7D0;
+}
+
+currently-market {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 120px 0px;
+  /* position: relative; */
+}
+
+.currently-market-item {
+  width: 45%;
+  /* margin: 0 auto; */
+  margin-left: 9%;
+}
+
+.currently-market .section-heading {
+  text-align: left;
+}
+
+.currently-market .section-heading .line-dec {
+  /* margin-left: 0; */
+}
+
+.currently-market .filters {
+  text-align: right;
+}
+
+.currently-market .filters ul li {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #39424e;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.currently-market .filters ul li:first-child {
+  margin-left: 0px;
+}
+
+
+.currently-market .filters ul li.active,
+.currently-market .filters ul li:hover {
+  background-color: #7453fc;
+}
+
+.currently-market .item {
+  /* background-color: #282b2f; */
+  border: 1px solid #C2C7D0;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.currently-market .item .right-content {
+  margin-left: 30px;
+  width: 100%;
+}
+
+.currently-market .item .right-content h4 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.currently-market .item .right-content h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #FE5E5E;
+  /* margin-bottom: 25px; */
+}
+
+.currently-market .item .right-content span.author {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.currently-market .item .right-content span.author img {
+  margin-right: 15px;
+}
+
+.currently-market .item .right-content span.author h6 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.currently-market .item .right-content span.author a {
+  color: #39424e;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.currently-market .item span {
+  color: #39424e;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.currently-market .item .line-dec {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+
+.currently-market .item span strong {
+  font-size: 20px;
+}
+
+.currently-market .item span.bid {
+  line-height: 35px;
+}
+
+.currently-market .item span.bid em,
+.currently-market .item span.ends em {
+  font-style: normal;
+}
+
+.currently-market .item span.ends {
+  text-align: right;
+  float: right;
+  line-height: 35px;
+}
+
+.currently-market .item .text-button {
+  margin-top: 40px;
+}
+
+.currently-market .item .text-button a {
+  font-size: 15px;
+  font-weight: 700;
+  color: #39424e;
+  border-bottom: 1px solid #7453fc;
+}

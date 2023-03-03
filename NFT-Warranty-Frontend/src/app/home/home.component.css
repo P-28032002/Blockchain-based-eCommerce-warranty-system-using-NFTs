@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+
+}
+
+.home-body{
+  margin-left: 120px;
+  margin-top: 35px;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-body{
+  margin-left: 35px;
+}
+
+.top-body{
+  margin-right: 100px;
+}
+
+.div {
+    margin-left: 30px;
+    width:50%;
+    margin-right: 10px;
+}
+.main{
+  margin-left:50px;
+  margin-top: 60px;
+  height:100%;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  line-height: 2;
+}
+
+/* Clear floats after the columns */
+.row:after {
+
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slogan{
+  color: #738f93;
+  font-size: 40.001px;
+  margin-top: 100px;
+  width: 400px;
+  font-weight: 300;
+}
+
+.msg{
+  color: #39424e;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.msg-body1{
+  color: #576871;
+  margin-top: 15px;
+  font-weight: lighter;
+  line-height: 1.538em;
+  width: 310px;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.msg-body2{
+  margin-top: 0px;
+  color: #576871;
+  font-weight: lighter;
+  line-height: 1.538em;
+  width: 330px;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+/*
+.btn-grad {
+   background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ } */
+
+.button1{
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right,#e52d27, #FE5E5E);
+  color: #fff;
+  border: none;
+  font-size: 17px;
+  margin-right: 20px;
+}
+
+.button2{
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #e52d27;
+  border: solid 1px;
+  font-size: 17px;
+}
+
+.button{
+  height: 50px;
+  width: 150px;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.button .button-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right,#003366,#004080,#0059b3
+, #0073e6);
+  border-radius: 15px;
+  transition: all 0.4s ease;;
+}
+.button input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* .button {
+  border: 6px solid #2196F3 ;
+  background-color:white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  color: dodgerblue
+}
+.button:hover {
+  background: #2196F3;
+  color: white;
+} */
